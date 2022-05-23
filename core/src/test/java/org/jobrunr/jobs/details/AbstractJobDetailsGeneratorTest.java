@@ -1065,7 +1065,7 @@ public abstract class AbstractJobDetailsGeneratorTest {
         thread3.start();
         thread4.start();
 
-        countDownLatch.await(100, TimeUnit.SECONDS);
+        countDownLatch.await(10, TimeUnit.SECONDS);
         assertThat(jobDetailsResults).hasSize(2000);
         jobDetailsResults.keySet().stream()
                 .forEach(key -> {
